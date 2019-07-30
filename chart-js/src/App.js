@@ -58,7 +58,19 @@ export default class App extends Component {
                 <h2>Let's go Line charts!</h2>
                 <Line
                     options={{
-                        responsive: true
+                        responsive: true,
+                        scales: {
+                            xAxes: [{
+                                gridLines: {
+                                    display:false
+                                }
+                            }],
+                            yAxes: [{
+                                gridLines: {
+                                    display:false
+                                }   
+                            }]
+                        }
                     }}
                     data={this.getChartData}
                 />
