@@ -7,6 +7,7 @@ export default class App extends Component {
         this.state = {
             data: {
                 labels: ["Jun", "Jul", "Ago", "Set", "Oct"],
+                //Where you'll set static data and configs 
                 datasets: [
                     {
                         label: "Paginas feitas",
@@ -23,6 +24,10 @@ export default class App extends Component {
         }
     }
 
+
+    /**
+     * This function set the gradient config
+     */
     setGradientColor = (canvas, color) => {
         const ctx = canvas.getContext('2d')
         const gradient = ctx.createLinearGradient(0, 0, 600, 550)
@@ -31,6 +36,9 @@ export default class App extends Component {
         return gradient
     }
 
+    /**
+     * This function build the datasets dynamic, and build the chart styles 
+     */
     getChartData = canvas => {
         const data = this.state.data
         if(data.datasets){
