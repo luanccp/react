@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Line, Bar } from 'react-chartjs-2'
+import Chronoscomponent from './components/chronoscomponent'
 
 export default class App extends Component {
     constructor(props) {
@@ -23,7 +24,6 @@ export default class App extends Component {
             }
         }
     }
-
 
     /**
      * This function set the gradient config
@@ -55,6 +55,8 @@ export default class App extends Component {
     render() {
         return (
             <div style={{position:"relative", width: 600, height: 550}}>
+                <h2>gStudio component</h2>
+                <Chronoscomponent />
                 <h2>Let's go Line charts!</h2>
                 <Line
                     options={{
@@ -70,6 +72,12 @@ export default class App extends Component {
                                     display:false
                                 }   
                             }]
+                        },
+                        legend: {
+                            display: true,
+                            labels: {
+                                fontColor: 'rgb(255, 99, 132)'
+                            }
                         }
                     }}
                     data={this.getChartData}
