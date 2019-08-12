@@ -1,0 +1,12 @@
+[
+    {
+        "name":"Themes",
+        "dark":{
+            "displayCategoria":"buttons",
+            "values":{
+                "label":"$color",
+                "value":"#FFFFFF"
+            }
+        }
+    }
+]
